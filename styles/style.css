@@ -62,3 +62,34 @@ main {
     color: white;
     font-size: 3rem;
 }
+
+.game-buttons {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.icon-button {
+    height: 32px;
+}
+
+.next-icon {
+    position: relative;
+    top: 3px;
+}
+
+.dice {
+    height: 150px;
+}
+
+.new-game-container {
+    top: -20vh;
+}
+
+.holdnroll-buttons {
+    bottom: -10vh;
+}
+
+.hold-container {
+    right: -1vw;
+}
