@@ -26,7 +26,8 @@ $(document).ready(() => {
   }
 
   function changeActivePlayer(active) {
-     if (active === P1) {
+    current.html(`0`);
+    if (active === P1) {
        current = P2Current;
        total = P2Total;
        return setActivePlayer(P2, P1);
@@ -64,5 +65,13 @@ $(document).ready(() => {
       currentScore += dice;
       current.html(currentScore);
     }
+  });
+
+  $(`#hold-button`).click(() => {
+    let curTotal = parseInt(total.html());
+
+    curTotal += parseInt(current.html());
+    total.html(curTotal);
+    activePlayer = changeActivePlayer(activePlayer);
   });
 });

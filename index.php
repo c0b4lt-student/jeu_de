@@ -32,7 +32,7 @@
             <img class="icon-button" src="images/curved_arrow.png" alt="button to roll dice" />
             <p class="next-icon">&nbsp&nbsp&nbspROLL DICE</p>
           </a>
-          <a href="#" class="hold-container d-flex position-relative text-reset text-decoration-none">
+          <a href="#" class="hold-container d-flex position-relative text-reset text-decoration-none" id="hold-button">
             <img class="icon-button" src="images/hold.png" alt="button to hold score" />
             <p class="next-icon">&nbsp&nbsp&nbspHOLD</p>
           </a>
