@@ -1,6 +1,12 @@
 $(document).ready(() => {
   let P1 = $(`#P1-name`);
   let P2 = $(`#P2-name`);
+  let P1Current = $(`#P1-current`);
+  let P2Current = $(`#P2-current`);
+  let current = P1Current;
+  let P1Total = $(`#P1-score`);
+  let P2Total = $(`#P2-score`);
+  let total = P1Total;
   let activePlayer = P1;
   let dice = 0;
 
@@ -21,10 +27,18 @@ $(document).ready(() => {
 
   function changeActivePlayer(active) {
      if (active === P1) {
+       current = P2Current;
+       total = P2Total;
        return setActivePlayer(P2, P1);
      } else {
+       current = P1Current;
+       total = P1Total;
        return setActivePlayer(P1, P2);
      }
+  }
+
+  function changeDiceImg(number) {
+    $(`#dice-img`).attr(`src`, `../images/dice/dice_${number}.png`);
   }
 
   $(`#new-game-button`).click(() => {
@@ -32,17 +46,23 @@ $(document).ready(() => {
 
     askName(P1, `1`);
     askName(P2, `2`)
-    startPlayer === 1 ? activePlayer = setActivePlayer(P1, P2) : activePlayer = setActivePlayer(P2, P1);
+    if (startPlayer === 2) {
+      changeActivePlayer(P1);
+    }
     dice = 0;
   });
 
   $(`#roll-button`).click(() => {
     dice = Math.floor(Math.random() * (6) + 1);
-    console.log(dice);
+    changeDiceImg(dice);
     if (dice === 1) {
+      current.html(`0`);
       activePlayer = changeActivePlayer(activePlayer);
     } else {
+      let currentScore = parseInt(current.html());
 
+      currentScore += dice;
+      current.html(currentScore);
     }
-  })
+  });
 });
