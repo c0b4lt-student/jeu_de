@@ -11,7 +11,7 @@
 </head>
 <body class="container-fluid">
   <main class="vh-100 p-3 row">
-    <div class="P-board" id="P1-board">
+    <div class="P-board P1-board" id="P1-board">
       <div class="P-name-container w-75 m-auto position-relative">
         <p class="P-name P-name-active text-center m-0" id="P1-name">PLAYER 1&nbsp&nbsp&nbsp</p>
         <p class="text-center total-score text-danger" id="P1-score">0</p>
@@ -38,7 +38,7 @@
           </a>
         </div>
       </div>
-    <div class="P-board" id="P2-board">
+    <div class="P-board P2-board" id="P2-board">
       <div class="P-name-container w-75 m-auto position-relative">
         <p class="text-center font-weight-lighter P-name P-name-unactive m-0" id="P2-name">PLAYER 2&nbsp&nbsp&nbsp</p>
         <p class="text-center total-score text-danger" id="P2-score">0</p>
